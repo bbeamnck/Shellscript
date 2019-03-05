@@ -1,0 +1,15 @@
+#!/bin/bash
+start=$1
+stop=$2
+keyword=$3
+startD=$(awk $(echo $start| cut -d'-' -f 1))
+startM=$(echo $start| cut -d'-' -f 2)
+startY=$(echo $start| cut -d'-' -f 3)
+stopD=$(awk $(echo $stop|cut -d'-' -f 1))
+stopM=$(echo $stop|cut -d'-' -f 2)
+stopY=$(echo $stop|cut -d'-' -f 3)
+while [ "$startD" != "$stopD" ]
+do
+	echo $startD
+	$startD=$(aw$startD+1)
+done
